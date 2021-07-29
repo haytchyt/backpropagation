@@ -1,20 +1,13 @@
 Neural Network
 ---
 
-Neural Networks (NN) are important data mining tool used for classication and clustering.
-It is an attempt to build machine that will mimic brain activities and be able to learn.
-NN usually learns by examples. If NN is supplied with enough examples, it should be able
-to perform classication and even discover new trends or patterns in data. Basic NN is
-composed of three layers, input, output and hidden layer. Each layer can have number
-of nodes and nodes from input layer are connected to the nodes from hidden layer. Nodes
-from hidden layer are connected to the nodes from output layer. Those connections represent
-weights between nodes.
+Neural Networks (NN) are a widely used data mining method for classification and grouping.
+It's an attempt to create a machine that can learn and mimic brain processes.
+NN learns by example most of the time. If enough examples are provided to NN, it should be able to classify data and possibly uncover new trends or patterns. The basic NN has three layers: input, output, and a hidden layer. Nodes from the input layer are connected to nodes from the hidden layer, and each layer can have a large number of nodes. The output layer nodes are coupled to the nodes from the hidden layer. Weights between nodes are represented by those connections.
 
 Backpropagation Algorithm
 --
->Idea behind BP algorithm is quite simple, output of NN is evaluated against desired output. If results are not satisfactory, connection
-(weights) between layers are modied and process is repeated again and again until error is
-small enough.
+The basic idea underlying the BP method is that the output of the NN is compared to the desired output. If the results aren't good enough, the connection (weights) between the layers are changed, and the procedure is repeated until the mistake is small enough.
 
 Version
 ----
@@ -30,14 +23,14 @@ Requirement
 How it use?
 -----------
 ```sh
-git clone https://github.com/jgabriellima/backpropagation.git
+git clone https://github.com/haytchyt/backpropagation.git
 cd backpropagation
-python nn.py
+python backpropagation.py
 ```
 If you want modify experimental dataset, just put your datas on code 
 ```sh
 def demo():
-    # Teach network XOR function
+    #  XOR function
     pat = [
         [[0,0], [0]],
         [[0,1], [1]],
@@ -46,12 +39,8 @@ def demo():
     ]
 
     # create a network with two input, two hidden, and one output nodes
-    n = NN(2, 2, 1)
-    # train it with some patterns
+    n = newNetwork(2, 2, 1)
+    # train it with patterns
     n.train(pat)
-    # test it
+    # test with XOR
     n.test(pat)
-```
-
-Any questions, let me know: jgabriel.ufpa@gmail.com / http://jgabriellima.com
-
